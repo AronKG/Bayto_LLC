@@ -1,10 +1,23 @@
 /**
- * Sticky header navigation: mobile menu and active section highlight.
+ * Sticky header navigation: mobile menu, home link, and active section highlight.
  */
 export function initNav() {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector("#site-nav");
   const links = document.querySelectorAll('.site-nav a[href^="#"]');
+
+  document.querySelectorAll('a.brand[href="#top"]').forEach((brand) => {
+    brand.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      history.replaceState(null, "", "#top");
+      if (nav?.classList.contains("is-open") && toggle) {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
+      }
+    });
+  });
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
