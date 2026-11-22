@@ -1,11 +1,9 @@
 /**
- * Sticky header navigation: mobile menu, active section, sticky CTA visibility.
+ * Sticky header navigation: mobile menu and active section highlight.
  */
 export function initNav() {
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector("#site-nav");
-  const stickyCta = document.querySelector(".sticky-inquiry");
-  const inquiry = document.querySelector("#inquiry");
   const links = document.querySelectorAll('.site-nav a[href^="#"]');
 
   if (toggle && nav) {
@@ -23,18 +21,6 @@ export function initNav() {
         toggle.setAttribute("aria-label", "Open menu");
       });
     });
-  }
-
-  if (stickyCta && inquiry) {
-    const syncSticky = () => {
-      const rect = inquiry.getBoundingClientRect();
-      const inView = rect.top < window.innerHeight && rect.bottom > 0;
-      stickyCta.classList.toggle("is-hidden", inView);
-    };
-
-    syncSticky();
-    window.addEventListener("scroll", syncSticky, { passive: true });
-    window.addEventListener("resize", syncSticky);
   }
 
   const sections = ["services", "approach", "about"]

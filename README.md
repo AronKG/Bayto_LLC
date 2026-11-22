@@ -46,13 +46,21 @@ Open `http://localhost:8080`.
 
 Inquiries go to the email you registered with Web3Forms.
 
-## Deploy on GitHub Pages
+## Deploy on GitHub Pages (automatic)
 
-1. Push this repo to GitHub.
-2. **Settings → Pages → Source**: Deploy from branch `main` (root).
-3. Site URL: `https://<user>.github.io/<repo>/`
+This repo uses `.github/workflows/static.yml`. Every push to `main` republishes the site.
 
-If the site lives in a project subdirectory (not a custom domain / user page), keep asset paths relative (they already are).
+### Site URL
+
+`https://aronkg.github.io/Bayto_LLC/`
+
+### Redeploy after changes
+
+1. Commit and push to `main`.
+2. Open **Actions** → wait for **Deploy static content to Pages** to finish (green check).
+3. Hard-refresh the live site (`Ctrl+Shift+R`).
+
+Manual deploy: **Actions → Deploy static content to Pages → Run workflow**.
 
 ## Stack
 
