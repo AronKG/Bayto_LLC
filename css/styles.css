@@ -695,7 +695,6 @@ textarea {
 /* --- Footer / sticky CTA -------------------------------------------------- */
 .site-footer {
   border-top: 1px solid var(--color-border);
-  padding: var(--space-7) 0 0;
   background: var(--color-bg-elevated);
 }
 
@@ -703,14 +702,8 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-5);
-  padding-bottom: var(--space-7);
-}
-
-.footer-meta {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
+  gap: var(--space-4) var(--space-5);
+  padding: var(--space-6) 0;
 }
 
 .footer-nav {
@@ -732,7 +725,6 @@ textarea {
 
 .footer-bar {
   border-top: 1px solid var(--color-border);
-  background: #071018;
   padding: var(--space-4) 0;
   padding-bottom: calc(var(--space-4) + var(--safe-bottom));
 }
@@ -750,14 +742,13 @@ textarea {
   color: var(--color-text-muted);
   font-size: 0.85rem;
   line-height: 1.5;
-  max-width: 48rem;
 }
 
 .footer-policy {
   color: var(--color-text-muted);
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   white-space: nowrap;
 }
 
