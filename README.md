@@ -16,8 +16,8 @@ Bayto_LLC/
 │   ├── animations.js   # Scroll reveals & card tilt
 │   └── hero3d.js       # Three.js data-network hero
 ├── assets/
-│   ├── logo.svg
-│   └── favicon.svg
+│   ├── logo.svg      # Full BAYTO mark (icon + wordmark)
+│   └── favicon.svg   # Icon only (from the same logo)
 └── README.md
 ```
 
